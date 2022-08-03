@@ -37,8 +37,8 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 21px;
     color: #7690A8;
+    text-transform: uppercase;
 }
 
 .main-content h2 {
@@ -46,7 +46,6 @@
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
-    line-height: 21px;
     letter-spacing: 0.2px;
     color: #16133D;
     margin-top: 10px;
@@ -57,8 +56,8 @@
     box-sizing: content-box;
     padding: 14px 12px 14px 13px;
     border: 1px solid rgba(21, 101, 216, 0.1);
-    width: 38px;
-    height: 36px;
+    max-width: 38px;
+    max-height: 36px;
     border-radius: 16px;
 }
 
@@ -78,7 +77,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 17px;
     letter-spacing: 0.2px;
     color: #16133D;
     margin-bottom: 10px;
@@ -100,8 +98,8 @@
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 19px;
     color: #3DB370;
+    text-transform: none;
 }
 
 .main-content li {
@@ -112,6 +110,7 @@
     border-radius: 8px;
     padding: 30px;
     max-width: 370px;
+    margin-bottom: 15px;
 }
 
 .main-content li:hover {
@@ -127,11 +126,11 @@
 
 .footer {
     background-color: #16133D;
-    margin-top: 25px;
 }
 
 .footer img {
     margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .footer svg {
@@ -148,13 +147,25 @@
     justify-content: flex-start;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 25px;
     padding-bottom: 50px;
 }
 
 .footer .icon:hover {
     fill: #3DB370;
     cursor: pointer;
+}
+
+@media only screen and (min-width:600px) and (max-width:930px) {
+
+    .main-content ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
 }
 
 @media only screen and (min-width: 930px) {
@@ -172,16 +183,18 @@
         margin-bottom: 100px;
     }
 
+    .main-content {
+        padding-bottom: 100px;
+    }
+
     
     .main-content span {
         font-size: 16px;
-        line-height: 21px;
         color: #7690A8;
     }
     
     .main-content h2 {
         font-size: 40px;
-        line-height: 52px;
         letter-spacing: 0.2px;
         color: #16133D;
         margin-top: 15px;
@@ -197,16 +210,6 @@
         border-radius: 16px;
     }
     
-    .main-content li .icon-2 {
-        display: none;
-    }
-    
-    .main-content li:hover .icon {
-        display: none;
-    }
-    .main-content li:hover .icon-2 {
-        display: inline;
-    }
     
     .main-content h3 {
         font-size: 24px;
@@ -227,7 +230,6 @@
     .main-content .link a {
         text-decoration: none;
         font-size: 16px;
-        line-height: 19px;
     }
     
     .main-content li {
@@ -236,7 +238,6 @@
         padding: 30px;
         max-width: 370px;
     }
-
     
     .main-content ul {
         display: flex;
@@ -245,17 +246,14 @@
         gap: 30px;
     }
     
-    .footer {
-        margin-top: 100px;
-    }
     
     .footer img {
         margin-top: 40px;
     }
     
     .footer svg {
-        width: 20px;
-        height: 20px;
+        max-width: 20px;
+        max-height: 20px;
         box-sizing: content-box;
         padding: 9px;
         border-radius: 5px;
@@ -266,7 +264,6 @@
         justify-content: flex-start;
         gap: 10px;
         flex-wrap: wrap;
-        margin-top: 40px;
         padding-bottom: 40px;
     }
 
