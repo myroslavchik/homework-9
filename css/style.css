@@ -1,5 +1,11 @@
 /*review*/
 
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 * {
     box-sizing: border-box;
     line-height: 1;
@@ -18,6 +24,7 @@
     overflow: hidden;
   }
 
+
 .container {
     max-width: 930px;
     margin: 0 auto;
@@ -27,8 +34,8 @@
 .main-header {
     min-height: 40px;
     display: inline-block;
-    padding-top: 22px;
     margin-bottom: 50px;
+    padding-top: 22px;
 }
 
 
@@ -113,6 +120,10 @@
     margin-bottom: 15px;
 }
 
+.main-content li:last-child {
+    margin-bottom: 0;
+}
+
 .main-content li:hover {
     border-color: #3DB370;
 }
@@ -120,16 +131,18 @@
 .main-content ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     gap: 5px;
+    padding-bottom: 15px;
 }
 
 .footer {
     background-color: #16133D;
+    padding-top: 15px;
 }
 
 .footer img {
-    margin-top: 15px;
     margin-bottom: 25px;
 }
 
@@ -145,33 +158,42 @@
 .footer ul {
     display: flex;
     justify-content: flex-start;
-    gap: 15px;
     flex-wrap: wrap;
     padding-bottom: 50px;
 }
+
+.footer ul li {
+    margin-right: 15px;
+}
+
+.footer ul li:last-of-type {
+    margin-right: 0;
+}
+
+
 
 .footer .icon:hover {
     fill: #3DB370;
     cursor: pointer;
 }
 
-@media only screen and (min-width:600px) and (max-width:930px) {
+@media only screen and (min-width:600px) and (max-width:1170px) {
 
     .main-content ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 5px;
     }
 
 }
 
-@media only screen and (min-width: 930px) {
+@media only screen and (min-width: 1170px) {
  
     .container {
-        min-width: 1140px;
+        min-width: 1170px;
         margin: 0 auto;
         padding: 0 15px;
     }
@@ -180,7 +202,7 @@
         min-height: 80px;
         display: block;
         padding-top: 22px;
-        margin-bottom: 100px;
+        margin-bottom: 122px;
     }
 
     .main-content {
@@ -237,6 +259,7 @@
         flex-direction: column;
         padding: 30px;
         max-width: 370px;
+        margin-bottom: 0;
     }
     
     .main-content ul {
@@ -245,10 +268,15 @@
         justify-content: space-between;
         gap: 30px;
     }
+
+    .footer {
+        padding-top: 40px;
+        
+    }
     
     
     .footer img {
-        margin-top: 40px;
+        margin-top: 0;
     }
     
     .footer svg {
@@ -262,7 +290,7 @@
     .footer ul {
         display: flex;
         justify-content: flex-start;
-        gap: 10px;
+        gap: 0;
         flex-wrap: wrap;
         padding-bottom: 40px;
     }
